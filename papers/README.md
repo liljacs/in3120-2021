@@ -6,7 +6,7 @@ Some of the papers below are key to the course assignments or are covered by lec
 
 ## Algorithms and data structures for search
 
-* (☕) W. Pugh, ["Skip Lists: A Probabilistic Alternative to Balanced Trees"](skip-lists.pdf).
+* (🍀/☕) W. Pugh, ["Skip Lists: A Probabilistic Alternative to Balanced Trees"](skip-lists.pdf).
 
   The textbook discusses skip lists as a way to speed up the evaluation of posting list intersections in sublinear time, along with some heuristics for placing the skip pointers. This the the original paper on skip lists and goes into more depth on the skip list data structure, and discusses how multi-level skip lists (i.e., having skip lists on top of skip lists) become a tree-like data structure.
 
@@ -16,7 +16,7 @@ Some of the papers below are key to the course assignments or are covered by lec
 
 * (🍀) B. H. Bloom, ["Space/Time Trade-offs in Hash Coding with Allowable Errors"](space-time-trade-offs-in-hash-coding-with-allowable-errors.pdf).
 
-  This is the original paper on Bloom filters. A Bloom filter is an extremely useful probabilistic data structure for use in search and elsewhere: It's a data structure that helps you answer set membership questions, without actually storing the set itself. Anwers may be wrong, but only in the false positive sense and not in the false negative sense: So no means no, and yes means maybe. You can control the probability of false positives through how you construct the Bloom filter.
+  This is the original paper on Bloom filters. A Bloom filter is an extremely useful and space-efficient probabilistic data structure for use in search and elsewhere: It's a data structure that helps you answer set membership questions, without actually storing the set itself. Anwers may be wrong, but only in the false positive sense and not in the false negative sense: So no means no, and yes means maybe. You can control the probability of false positives through how you construct the Bloom filter.
 
 * (☕) B. Fan, D. G. Andersen, M. Kaminsky, M. D. Mitzenmacher, ["Cuckoo Filter: Practically Better Than Bloom"](cuckoo-filter-practically-better-than-bloom.pdf).
 
@@ -56,11 +56,11 @@ Some of the papers below are key to the course assignments or are covered by lec
 
 * (🍀) D. Lemire, L. Boytsov, ["Decoding Billions of Integers Per Second Through Vectorization"](decoding-billions-of-integers-per-second.pdf).
 
-  The posting lists in an inverted index are typically compressed to yield a number of performance benefits, and the efficiency of decompressing these lists is thus a focus area. Industrial-strength implementations are heavily optimized and concerned with utilizing the available hardware to its fullest, as this paper exemplifies. The paper's Related Work section gives a good summary of several families of relevant compression algorithms.
+  The posting lists in an inverted index are typically compressed to yield a number of performance benefits, and the efficiency of decompressing these lists is thus a focus area. Industrial-strength implementations are heavily optimized and concerned with utilizing the available hardware to its fullest, as this paper exemplifies. The paper's Related Work section gives a good summary of several families of relevant compression algorithms, including Simple-9 and PFOR which are not covered by the textbook. The hardware- and implementation focus of the paper is outside the scope of this course.
 
 ## Systems
 
-* (☕) J. Dean, S. Ghemawat, ["MapReduce: Simplified Data Processing on Large Clusters"](mapreduce-simplified-data-processing-on-large-clusters.pdf).
+* (🍀/☕) J. Dean, S. Ghemawat, ["MapReduce: Simplified Data Processing on Large Clusters"](mapreduce-simplified-data-processing-on-large-clusters.pdf).
 
   The textbook thoroughly discusses MapReduce in the context of distributed indexing. This is the original paper. A typical use of such systems is to process large logs and data sets, e.g., query- or clickthrough logs. Apache Hadoop, Apache Spark and similar systems are popular open-source systems inspired by MapReduce.
 
@@ -76,12 +76,12 @@ Some of the papers below are key to the course assignments or are covered by lec
 
 * (🌟) A. Øhrn, ["Classifier Evaluation"](classifier-evaluation.pdf).
 
-  When developing supervised ML models it is important that we do not "cheat" by evaluating the model on data it had available during training, so that we can assess how good it is at generalizing to new examples. The textbook discusses this, and this supplementary note goes into more detail and also covers topics such as cross-validation and ROC analysis.
-
-* (🍀) Y. Goldberg, ["A Primer on Neural Network Models for Natural Language Processing"](a-primer-on-neural-network-models-for-natural-language-processing.pdf).
-
-  Neural network models are all the rage in NLP these days. The first part of this paper provides a good overview of what neural networks are, how they are applied to text, and how training a model amounts to optimizing an objective function through gradient descent. 
+  When developing supervised ML models it is important that we do not "cheat" by evaluating the model on data it had available during training, so that we can assess how good it is at generalizing to new and unseen examples. The textbook discusses this, and this supplementary note goes into more detail and also covers topics such as cross-validation and ROC analysis.
 
 * (🍀) T. Mikolov, I. Sutskever, K. Chen, G. Corrado, J. Dean, ["Distributed Representations of Words and Phrases and their Compositionality"](distributed-representations-of-words-and-phrases-and-their-compositionality.pdf).
 
-  The textbook discusses vector space models with one dimension per word or dictionary entry, which is a sparse high-dimensional representation. A more recent concept that has proven itself to be an important part of neural approaches to NLP is that of embedding vectors, where words and phrases are represented through dense lower-dimensional vectors. This paper outlines one approach for learning such embedding vectors. An important appeal of embedding vectors is that proximity in vector space also convey semantic similarity, enabling word analogies to often be solved with vector arithmetic. E.g., "queen ≈ king - man + woman".
+  The textbook discusses vector space models with one dimension per word or dictionary entry, which is a sparse high-dimensional representation. A more recent concept that has proven itself to be an important part of neural approaches to NLP is that of embedding vectors, where words and phrases are represented through dense lower-dimensional vectors. This paper outlines one approach for learning such embedding vectors. An important appeal of embedding vectors is that proximities in vector space also convey semantic similarity, enabling word analogies to often be solved with vector arithmetic. E.g., "queen ≈ king - man + woman".
+  
+* (🍀) Y. Goldberg, ["A Primer on Neural Network Models for Natural Language Processing"](a-primer-on-neural-network-models-for-natural-language-processing.pdf).
+
+  Neural network models are all the rage in NLP these days. The first part of this paper provides a good overview of what neural networks are, how they are applied to text, and how training a model amounts to optimizing an objective function through gradient descent.
