@@ -13,7 +13,11 @@ When turning in your solutions, please note:
 
 The coding assignments assume basic familiarity with the Python language. At least [version 3.7](https://www.python.org/downloads/release) will be assumed. You can use whatever development environment you want, but you will probably be more productive and have an easier time if you use a good IDE. We can recommend [PyCharm](https://www.jetbrains.com/pycharm/). You can use another set of tools if you want, but then don't expect help with solving challenges related to setup or tooling.
 
-You will be provided with some "precode" or "starter code", i.e., a set of helper classes and functions that you can make use of so that you don't have to start the coding assignments completely from scratch. This precode also sets some structure on how you implement the assignments. Please familiarize yourself with what's available. The precode is commented and has some illustrative usage examples, and is located in the [`in3120`](in3120/) folder of this repository. Tests and REPL-related code can be found in the [`tests`](tests/) folder.
+You will be provided with some "precode" or "starter code", i.e., a set of helper classes and functions that you can make use of so that you don't have to start the coding assignments completely from scratch. This precode also sets some structure on how you implement the assignments. Please familiarize yourself with what's available. The precode is commented and has some illustrative usage examples. Please note the following three folders in the repository:
+
+* [`in3120`](in3120/): The actual precode.
+* [`tests`](tests/): Tests and REPL-related code.
+* [`data`](data/): Various corpora used by the tests.
 
 The precode is in many places annotated with [type hints](https://www.python.org/dev/peps/pep-0484/). This doesn't make Python a statically typed language, but are just hints that are possible to ignore and abuse. They do convey intent and serve as a kind of additional documentation, though, and enable PyCharm and other IDEs to give you better and richer programming support.
 
@@ -66,3 +70,13 @@ Please read the assignment texts carefully before you begin. Answers to common q
 * [Assignment C](assignment-c.md).
 * [Assignment D](assignment-d.md).
 * [Assignment E](assignment-e.md).
+
+Lastly, please read the assignment texts carefully before you begin.
+
+# Other
+
+In addition to code for the programming assignments, this repository also contains supplementary materials for this course. In particular, note the following folders:
+
+* [`papers`](papers/): Various papers that supplement the textbook and that are used in this course.
+* [`slides`](slides/): Slides that are used as part of the lectures.
+* [`exams`](exams/): Final exams from previous years, including rough solution sketches.
