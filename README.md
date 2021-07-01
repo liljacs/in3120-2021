@@ -2,18 +2,9 @@
 
 There are five obligatory assignments in IN3120 and IN4120. In addition, there will be an obligatory [science fair](science-fair.md) for the IN4120 students.
 
-When turning in your solutions, please note:
-
-* Submit your solution using [Devilry](https://devilry.ifi.uio.no/). No emails with attachments, please.
-* Your submission should be an archive in either _*.zip_, _*.tar_ or _*.tar.gz_ format. No other archive formats, please.
-* Your implementation should only make use of [standard Python libraries](https://docs.python.org/3/library/index.html). No imports of non-standard libraries, please.
-* Your implementation should be fully contained in the supplied _*.py_ files. Don't introduce any new files, please.
-* The files you submit for your implementation should only be the _*.py_ files where there are missing implementations per the assignment. Don't submit untouched files from this repository, please, and don't spread your implementation across other files.
-* Your implementation should adhere to the APIs of the abstract base classes, without modifications.
-
 The coding assignments assume basic familiarity with the Python language. At least [version 3.7](https://www.python.org/downloads/release) will be assumed. You can use whatever development environment you want, but you will probably be more productive and have an easier time if you use a good IDE. We can recommend [PyCharm](https://www.jetbrains.com/pycharm/). You can use another set of tools if you want, but then don't expect help with solving challenges related to setup or tooling.
 
-You will be provided with some "precode" or "starter code", i.e., a set of helper classes and functions that you can make use of so that you don't have to start the coding assignments completely from scratch. This precode also sets some structure on how you implement the assignments. Please familiarize yourself with what's available. The precode is commented and has some illustrative usage examples. Please note the following three folders in the repository:
+You will be provided with some "precode" or "starter code", i.e., a set of helper classes and functions that you can make use of so that you don't have to start the coding assignments completely from scratch. This precode also sets some structure on how you implement the assignments. Please familiarize yourself with what's available. The precode is commented and has some illustrative usage examples. Note the following three folders in the repository:
 
 * [`in3120`](in3120/): The actual precode.
 * [`tests`](tests/): Tests and REPL-related code.
@@ -22,8 +13,6 @@ You will be provided with some "precode" or "starter code", i.e., a set of helpe
 The precode is in many places annotated with [type hints](https://www.python.org/dev/peps/pep-0484/). This doesn't make Python a statically typed language, but are just hints that are possible to ignore and abuse. They do convey intent and serve as a kind of additional documentation, though, and enable PyCharm and other IDEs to give you better and richer programming support.
 
 Please strive to create readable and modular code. At a minimum, your code should pass all PyCharm's quality checks with PyCharm's standard configuration. PyCharm warns about quality issues in its right-hand scrollbar. Please fix all these before submitting your code.
-
-All your implementations should be reasonably efficient, complexity-wise. E.g., if the assignment specifies that your solution should run in logarithmic time, a solution that yields the correct output and passes all tests but that runs in quadratic time won't pass muster.
 
 # Tests
 
@@ -72,6 +61,23 @@ Please read the assignment texts carefully before you begin. Answers to common q
 * [Assignment E](assignment-e.md).
 
 Lastly, please read the assignment texts carefully before you begin.
+
+# Solutions
+
+The different assignments have different deadlines. Please see the assignment texts for exact dates.
+
+Your implementations should make all tests pass.
+
+All your implementations should be reasonably efficient, complexity-wise. E.g., if the assignment specifies that your solution should run in logarithmic time, a solution that yields the correct output and passes all tests but that runs in quadratic time won't pass muster.
+
+When turning in your solutions, please note:
+
+* Submit your solution using [Devilry](https://devilry.ifi.uio.no/). No emails with attachments, please.
+* Your submission should be an archive in either _*.zip_, _*.tar_ or _*.tar.gz_ format. No other archive formats, please.
+* Your implementation should only make use of [standard Python libraries](https://docs.python.org/3/library/index.html). No imports of non-standard libraries, please.
+* Your implementation should be fully contained in the supplied _*.py_ files. Don't introduce any new files, please.
+* The files you submit for your implementation should only be the _*.py_ files where there are missing implementations per the assignment. Don't submit untouched files from this repository, please, and don't spread your implementation across other files.
+* Your implementation should adhere to the APIs of the abstract base classes, without modifications.
 
 # Other
 
