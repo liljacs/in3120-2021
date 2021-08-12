@@ -1,6 +1,6 @@
 # Assignment D
 
-**Deadline:** YYYY-MM-DD
+**Deadline:** 2021-10-29 
 
 The purpose of this assignment is twofold:
 
