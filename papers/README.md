@@ -26,6 +26,10 @@ Some of the papers below are key to the course assignments or are covered by lec
 
   The textbook starts with discussing document-term matrices, and then arrives at an inverted index as a way to represent a sparse document-term matrix. Alternative approaches and representations exist, and one that has shown itself feasible and cost-efficient is to consider rows of bits (the "signature" of a document) in a document-term matrix as the primary way to represent an indexed document. This paper illustrates such an approach in use at Microsoft.
 
+* (☕) Y. A. Malkov, D. A. Yashunin, ["Efficient and Robust Approximate Nearest Neighbor Search using Hierarchical Navigable Small World Graphs"](efficient-and-robust-approximate-nearest-neighbor-search.pdf).
+
+  Through appropriate preprocessing we can represent documents and queries as dense numerical vectors, e.g., using the embedding vector techniques described in some of the other papers listed here. Searching for the most relevant documents then becomes a problem of being able to very efficiently identify which document vectors that are the closest to the query vector according to some suitable distance metric. This paper describes an index structure specialized for this purpose.
+
 ## Algorithms and data structures for strings
 
 * (🍀) U. Germann, E. Joanis, S. Larkin, ["Tightly Packed Tries: How to Fit Large Models in Memory and Make them Load Fast, Too"](tightly-packed-tries.pdf).
@@ -78,10 +82,10 @@ Some of the papers below are key to the course assignments or are covered by lec
 
   When developing supervised ML models it is important that we do not "cheat" by evaluating the model on data it had available during training, so that we can assess how good it is at generalizing to new and unseen examples. The textbook discusses this, and this supplementary note goes into more detail and also covers topics such as cross-validation and ROC analysis.
 
-* (🍀) T. Mikolov, I. Sutskever, K. Chen, G. Corrado, J. Dean, ["Distributed Representations of Words and Phrases and their Compositionality"](distributed-representations-of-words-and-phrases-and-their-compositionality.pdf).
-
-  The textbook discusses vector space models with one dimension per word or dictionary entry, which is a sparse high-dimensional representation. A more recent concept that has proven itself to be an important part of neural approaches to NLP is that of embedding vectors, where words and phrases are represented through dense lower-dimensional vectors. This paper outlines one approach for learning such embedding vectors. An important appeal of embedding vectors is that proximities in vector space also convey semantic similarity, enabling word analogies to often be solved with vector arithmetic. E.g., "queen ≈ king - man + woman".
-  
 * (🍀) Y. Goldberg, ["A Primer on Neural Network Models for Natural Language Processing"](a-primer-on-neural-network-models-for-natural-language-processing.pdf).
 
   Neural network models are all the rage in NLP these days. The first part of this paper provides a good overview of what neural networks are, how they are applied to text, and how training a model amounts to optimizing an objective function through gradient descent.
+
+* (🍀) T. Mikolov, I. Sutskever, K. Chen, G. Corrado, J. Dean, ["Distributed Representations of Words and Phrases and their Compositionality"](distributed-representations-of-words-and-phrases-and-their-compositionality.pdf).
+
+  The textbook discusses vector space models with one dimension per word or dictionary entry, which is a sparse high-dimensional representation. A more recent concept that has proven itself to be an important part of neural approaches to NLP is that of embedding vectors, where words and phrases are represented through dense lower-dimensional vectors. This paper outlines one approach for learning such embedding vectors. An important appeal of embedding vectors is that proximity in vector space also convey semantic similarity, enabling word analogies to often be solved with vector arithmetic. E.g., "queen ≈ king - man + woman".
