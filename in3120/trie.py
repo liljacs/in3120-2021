@@ -1,11 +1,9 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
+from __future__ import annotations
 from .tokenizer import Tokenizer
-from typing import Optional, TypeVar, Iterable
-
-
-Trie = TypeVar('Trie', bound='Trie')
+from typing import Optional, Iterable
 
 
 class Trie:
