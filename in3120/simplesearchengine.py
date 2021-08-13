@@ -30,7 +30,8 @@ class SimpleSearchEngine:
         N is inferred from the query via the "match_threshold" (float) option, and the maximum number of documents
         to return to the client is controlled via the "hit_count" (int) option.
         """
-        # Use this variable to decide when to print debug information
+        # Print verbose debug information?
         debug = options.get("debug", False)
 
-        raise NotImplementedError("You must implement evaluate method in SimpleSearchEngine")
+        # Document-at-a-time!
+        raise NotImplementedError("You need to implement this as part of the assignment.")

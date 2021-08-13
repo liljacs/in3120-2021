@@ -19,8 +19,7 @@ class PostingsMerger:
         The posting lists are assumed sorted in increasing order according
         to the document identifiers.
         """
-
-        raise NotImplementedError("You must implement the intersection method in PostinsMerger")
+        raise NotImplementedError("You need to implement this as part of the assignment.")
 
     @staticmethod
     def union(p1: Iterator[Posting], p2: Iterator[Posting]) -> Iterator[Posting]:
@@ -31,5 +30,4 @@ class PostingsMerger:
         The posting lists are assumed sorted in increasing order according
         to the document identifiers.
         """
-
-        raise NotImplementedError("You must implement the union method in PostinsMerger")
+        raise NotImplementedError("You need to implement this as part of the assignment.")

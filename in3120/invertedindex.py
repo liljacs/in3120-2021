@@ -9,7 +9,7 @@ from .tokenizer import Tokenizer
 from .corpus import Corpus
 from .posting import Posting
 from collections import Counter
-from typing import Iterable, Iterator
+from typing import Iterable, Iterator, List
 
 
 class InvertedIndex(ABC):
@@ -60,9 +60,9 @@ class InMemoryInvertedIndex(InvertedIndex):
         self.__corpus = corpus
         self.__normalizer = normalizer
         self.__tokenizer = tokenizer
-        self.__posting_lists = []
+        self.__posting_lists : List[Posting] = []
         self.__dictionary = InMemoryDictionary()
-        self.__build_index(fields)
+        self.__build_index(fields)  # Constructs __posting_lists and __dictionary.
 
     def __repr__(self):
         return str({term: self.__posting_lists[term_id] for (term, term_id) in self.__dictionary})
@@ -73,8 +73,7 @@ class InMemoryInvertedIndex(InvertedIndex):
         collection. The dictionary implementation is assumed to produce term
         identifiers in the range {0, ..., N - 1}.
         """
-
-        raise NotImplementedError("You must implement the _build_index method in InMemoryInvertedIndex")
+        raise NotImplementedError("You need to implement this as part of the assignment.")
 
     def get_terms(self, buffer: str) -> Iterator[str]:
         tokens = self.__tokenizer.strings(self.__normalizer.canonicalize(buffer))

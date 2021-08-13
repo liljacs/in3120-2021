@@ -7,7 +7,7 @@ from .sieve import Sieve
 from .corpus import Corpus
 from .normalizer import Normalizer
 from .tokenizer import Tokenizer
-from typing import Any, Dict, Iterator, Iterable, Tuple
+from typing import Any, Dict, Iterator, Iterable, Tuple, List
 
 
 class SuffixArray:
@@ -21,20 +21,18 @@ class SuffixArray:
 
     def __init__(self, corpus: Corpus, fields: Iterable[str], normalizer: Normalizer, tokenizer: Tokenizer):
         self.__corpus = corpus
-        self.__haystack = []
-        self.__suffixes = []
+        self.__haystack: List[Tuple[int, str]] = []  # The (<document identifier>, <searchable content>) pairs.
+        self.__suffixes: List[Tuple[int, int]] = []  # The sorted (<haystack index>, <start offset>) pairs.
         self.__normalizer = normalizer
         self.__tokenizer = tokenizer
-        self.__build_suffix_array(fields)
-
-        self._document_contents = {}
+        self.__build_suffix_array(fields)  # Constructs __haystack and __suffixes.
 
     def __build_suffix_array(self, fields: Iterable[str]) -> None:
         """
         Builds a simple suffix array from the set of named fields in the document collection.
         The suffix array allows us to search across all named fields in one go.
         """
-        raise NotImplementedError("You must implement _build_suffix_array method in SuffixArrray")
+        raise NotImplementedError("You need to implement this as part of the assignment.")
 
     def __normalize(self, buffer: str) -> str:
         """
@@ -53,7 +51,7 @@ class SuffixArray:
         Kind of silly to roll our own binary search instead of using the bisect module, but seems needed
         due to how we represent the suffixes via (index, offset) tuples.
         """
-        raise NotImplementedError("You must implement the __binary_serach method in SuffixArray")
+        raise NotImplementedError("You need to implement this as part of the assignment.")
 
     def evaluate(self, query: str, options: dict) -> Iterator[Dict[str, Any]]:
         """
@@ -71,4 +69,4 @@ class SuffixArray:
         The results yielded back to the client are dictionaries having the keys "score" (int) and
         "document" (Document).
         """
-        raise NotImplementedError("You must implement the evaluate method in SuffixArray")
+        raise NotImplementedError("You need to implement this as part of the assignment.")

@@ -29,8 +29,40 @@ class NaiveBayesClassifier:
         # The vocabulary we've seen during training.
         self.__vocabulary = InMemoryDictionary()
 
-        raise NotImplementedError("You need to implement the training process in the contructor for NaiveBayesClassifier")
-       
+        # Maps a category c to the prior probability Pr(c).
+        self.__priors: Dict[str, float] = {}
+
+        # Maps a category c and a term t to the conditional probability Pr(t | c).
+        self.__conditionals: Dict[str, Dict[str, float]] = {}
+
+        # So that we know how to estimate Pr(t | c) for out-of-vocabulary terms encountered
+        # in the texts to classify. Basically the denominators when doing Laplace smoothing,
+        # for each category c.
+        self.__denominators: Dict[str, int] = {}
+
+        # Train the classifier, i.e., estimate all probabilities.
+        self.__compute_priors(training_set)
+        self.__compute_vocabulary(training_set, fields)
+        self.__compute_posteriors(training_set, fields)
+
+    def __compute_priors(self, training_set):
+        """
+        Estimates all prior probabilities needed for the naive Bayes classifier.
+        """
+        raise NotImplementedError("You need to implement this as part of the assignment.")
+
+    def __compute_vocabulary(self, training_set, fields):
+        """
+        Builds up the overall vocabulary as seen in the training set.
+        """
+        raise NotImplementedError("You need to implement this as part of the assignment.")
+
+    def __compute_posteriors(self, training_set, fields):
+        """
+        Estimates all conditional probabilities needed for the naive Bayes classifier.
+        """
+        raise NotImplementedError("You need to implement this as part of the assignment.")
+
     def __get_terms(self, buffer):
         """
         Processes the given text buffer and returns the sequence of normalized
@@ -49,5 +81,4 @@ class NaiveBayesClassifier:
         The results yielded back to the client are dictionaries having the keys "score" (float) and
         "category" (str).
         """
-
-        raise NotImplementedError("You must implement the classify method in NaiveBayesClassifier")
+        raise NotImplementedError("You need to implement this as part of the assignment.")

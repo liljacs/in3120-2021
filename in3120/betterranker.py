@@ -34,7 +34,7 @@ class BetterRanker(Ranker):
         self._document_id = document_id
 
     def update(self, term: str, multiplicity: int, posting: Posting) -> None:
-        raise NotImplementedError()
+        raise NotImplementedError("You need to implement this as part of the assignment.")
 
     def evaluate(self) -> float:
         document = self._corpus[self._document_id]

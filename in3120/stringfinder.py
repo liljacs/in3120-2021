@@ -36,5 +36,4 @@ class StringFinder:
         support for leftmost-longest matching (instead of reporting all matches), and support for lemmatization
         or similar linguistic variations.
         """
-
-        raise NotImplementedError("You must implement the scan method in StringFinder")
+        raise NotImplementedError("You need to implement this as part of the assignment.")
