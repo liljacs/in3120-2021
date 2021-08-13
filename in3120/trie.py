@@ -5,7 +5,7 @@ from .tokenizer import Tokenizer
 from typing import Optional, TypeVar, Iterable
 
 
-TrieType = TypeVar('Trie', bound='Trie')
+Trie = TypeVar('Trie', bound='Trie')
 
 
 class Trie:
@@ -45,7 +45,7 @@ class Trie:
         for string in strings:
             self.__add(" ".join(tokenizer.strings(string)))
 
-    def consume(self, prefix: str) -> Optional[TrieType]:
+    def consume(self, prefix: str) -> Optional[Trie]:
         """
         Consumes the given prefix, verbatim. If strings that have this prefix have been added to
         the trie, then the trie node corresponding to the prefix is returned. Otherwise, None is returned.
