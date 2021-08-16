@@ -5,7 +5,6 @@ from .ranker import Ranker
 from .corpus import Corpus
 from .posting import Posting
 from .invertedindex import InvertedIndex
-import math
 
 
 class BetterRanker(Ranker):
@@ -37,6 +36,4 @@ class BetterRanker(Ranker):
         raise NotImplementedError("You need to implement this as part of the assignment.")
 
     def evaluate(self) -> float:
-        document = self._corpus[self._document_id]
-        static_quality_score = float(document[self._static_score_field_name] or 0.0)
-        return (self._dynamic_score_weight * self._score) + (self._static_score_weight * static_quality_score)
+        raise NotImplementedError("You need to implement this as part of the assignment.")
