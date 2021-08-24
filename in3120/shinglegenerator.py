@@ -22,4 +22,4 @@ class ShingleGenerator(Tokenizer):
         The current implementation is simplistic and not whitespace- or punctuation-aware,
         and doesn't treat the beginning or end of the buffer in a special way.
         """
-        raise NotImplementedError()
+        raise NotImplementedError("You need to implement this as part of the assignment.")
