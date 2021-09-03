@@ -60,7 +60,7 @@ class InMemoryInvertedIndex(InvertedIndex):
         self.__corpus = corpus
         self.__normalizer = normalizer
         self.__tokenizer = tokenizer
-        self.__posting_lists : List[Posting] = []
+        self.__posting_lists : List[List[Posting]] = []
         self.__dictionary = InMemoryDictionary()
         self.__build_index(fields)  # Constructs __posting_lists and __dictionary.
 
